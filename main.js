@@ -22,18 +22,11 @@ function draw(){
         cnv.onpointerup = handlePointerUp;
         cnv.onpointermove = handlePointerMove;
     }
-    if(cnv.onpointerdown && cnv.onpointermove){
-        
-    }
-    function handlePointerDown(event){ // sets pressure
+    function handlePointerDown(event){
         //console.log("Pointer type is "+ event.pointerType);
         //console.log("Pointer pressure is "+ event.pressure);
         brushRadius = event.pressure*50;
         bCanPaint = true;
-        
-        //fill(0); // fill() only works for ellipse()
-        //strokeWeight(event.pressure*50);
-        //line(pMouseX,pMouseY, mouseX, mouseY);
     }
     function handlePointerMove(event){
         if(bCanPaint === true){
